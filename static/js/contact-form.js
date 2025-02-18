@@ -21,7 +21,7 @@ document.querySelector('#contact form').addEventListener('submit', async (e) => 
     button.textContent = 'Sending...';
 
     try {
-        const response = await fetch('https://cool-kite-divine.ngrok-free.app/contact', {
+        const response = await fetch('https://yc-web.onrender.com/contact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
