@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dmytro Shyrokov | Python & Backend Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+
+</head>
+<body class="bg-gray-900 text-gray-100 font-['Inter']">
+    <!-- Navigation -->
+    <nav class="fixed w-[95%] bg-gray-800/90 backdrop-blur-sm z-50 top-4 left-1/2 transform -translate-x-1/2 rounded-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo und Name -->
+                <div class="flex gap-[.5em] flex-row items-center">
+                    <img src="https://avatars.githubusercontent.com/u/142408709?v=4" 
+                         class="rounded-lg w-[2em] :rotate-3 transition-transform duration-300"
+                         alt="Dmytro Shyrokov">
+                    <h1 class="text-xl font-bold">Dmytro Shyrokov</h1>
+                </div>
+    
+                <!-- Desktop Navigation (hidden on mobile) -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="hover:text-blue-400 transition">About</a>
+                    <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                    <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                    <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+                </div>
+    
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden text-white hover:text-blue-400 transition">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                              d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu (hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 mt-2 bg-gray-800/90 backdrop-blur-sm rounded-lg">
+            <div class="px-6 py-4 flex flex-col space-y-4">
+                <a href="#about" class="hover:text-blue-400 transition">About</a>
+                <a href="#projects" class="hover:text-blue-400 transition">Projects</a>
+                <a href="#skills" class="hover:text-blue-400 transition">Skills</a>
+                <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+   
+    <script src="{{ url_for('static', path='js/mobile-menu.js') }}"></script>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl md:text-6xl font-bold mb-6">
+                        👨‍💻 Building Robust
+                        <div class="overflow-hidden h-[1em] inline-block relative">
+
+                            <span class="absolute left-0 text-green-400">></span>
+
+                            <span class="block rotate-words pl-[1.2em]">
+                                <span class="block text-blue-400">APIs</span>
+                                <span class="block text-blue-400">Software</span>
+                                <span class="block text-blue-400">Databases</span>
+                                <span class="block text-blue-400">Scripts</span>
+                            </span>
+                        </div>
+                    </h2>
+                    <p class="text-xl text-gray-400 mb-8">Python & Backend Developer specializing in Software & APIs design and development.</p>
+                    <a href="#projects" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-lg font-medium transition">View Projects</a>
+                </div>
+                <div class="md:w-1/2 mt-12 md:mt-0 relative">
+                    <div class="parallax-container w-4/5 mx-auto aspect-square rounded-2xl overflow-hidden shadow-2xl relative bg-gray-800">
+                        <div id="image-loader" class="absolute inset-0 flex items-center justify-center"></div>
+                        <div id="dynamic-image" class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-500"></div>
+
+                        <div class="code-overlay absolute inset-0 flex items-center justify-center p-6">
+                            <pre class="bg-gray-900/90 backdrop-blur-sm rounded-lg p-4 w-full max-w-md text-sm md:text-base overflow-hidden">
+                                <code id="animated-code" class="typewriter language-python font-mono text-blue-300 opacity-0"></code>
+                            </pre>
+                        </div>
+                    </div>
+
+                    <div class="absolute -top-10 -right-10 w-24 h-24 bg-blue-500/20 rounded-full blur-xl"></div>
+                    <div class="absolute -bottom-10 -left-10 w-32 h-32 bg-green-500/20 rounded-full blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', path='js/parallax-image-loader.js') }}"></script>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="https://avatars.githubusercontent.com/u/142408709?v=4" 
+                            class="rounded-2xl shadow-xl hover:rotate-3 transition-transform duration-300"
+                            alt="Dmytro Shyrokov">
+                </div>
+                <div class="md:w-2/3">
+                    <h3 class="text-3xl font-bold mb-6">👋 Hello there!</h3>
+                    <p class="text-gray-400 mb-6">
+
+                        Hello! My name is Dmytro, and I am 20 years old.
+                        I am a Python and Backend Developer with experience in building robust APIs and software solutions.
+                        I have three years of Python programming experience. My development stack includes frameworks such as FastAPI,
+                        PyQt5, aiogram, and Flask. Additionally, I use PostgreSQL for databases and other Python tools like Alembic,
+                        SQLAlchemy, Black, Pydantic and Poetry. In order to achieve my coding goals I often use VSCode, Postman, Insomnia, Qt Creator
+                        and other software solutions. When I'm not coding, you can find me capturing mesmerizing shots of urban
+                        and natural landscapes, engaging in sports, or contributing to my open-source projects.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-lg font-medium transition">
+                            Hire Me
+                        </a>
+                        <button disabled id="download-resume" href="/resume.pdf" 
+                            class="border border-blue-400 text-blue-400 hover:bg-blue-400/10 px-6 py-3 rounded-lg font-medium transition">
+                            Download Resume
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', path='js/smooth-scroll.js') }}"></script>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 ">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-12">Featured Projects</h3>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-gray-800 p-6 rounded-lg shadow-xl">
+                    <div class="bg-blue-900/20 p-4 rounded-lg mb-4">
+                        <h4 class="text-xl font-bold mb-2">MoneyGuard</h4>
+                        <p class="text-gray-400">Web application that helps you track your financial situation. (Backend part)</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">FastAPI</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">PostgreSQL</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Alembic</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">SQLAlchemy</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Pydantic</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Insomnia</span>
+                    </div>
+                    <a href="https://github.com/youngling-coder/MoneyGuard" target="_blank" class="text-blue-400 hover:text-blue-300">View Source Code -></a>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card bg-gray-800 p-6 rounded-lg shadow-xl">
+                    <div class="bg-blue-900/20 p-4 rounded-lg mb-4">
+                        <h4 class="text-xl font-bold mb-2">H4X-0R</h4>
+                        <p class="text-gray-400">Telegram Bot with integrated LLM. Add it to your groups and enjoy your own assistant in every conversation!</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">aiogram</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">requests</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Pydantic</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Gemini API</span>
+                    </div>
+                    <a href="https://github.com/youngling-coder/H4X-0R" target="_blank" class="text-blue-400 hover:text-blue-300">View Source Code -></a>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card bg-gray-800 p-6 rounded-lg shadow-xl">
+                    <div class="bg-blue-900/20 p-4 rounded-lg mb-4">
+                        <h4 class="text-xl font-bold mb-2">WallpaperED</h4>
+                        <p class="text-gray-400">Tool that automatically sets a new wallpaper image from the Unsplash every new session. Powered by the Unsplash API.</p>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">Python</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">PyQt5</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">requests</span>
+                        <span class="bg-gray-700 px-3 py-1 rounded-full text-sm">UnsplashAPI</span>
+                    </div>
+                    <a href="https://github.com/youngling-coder/wallpaper-ed" target="_blank" class="text-blue-400 hover:text-blue-300">View Source Code -></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800/50">
+        <div class="container mx-auto px-6">
+            <h3 class="text-3xl font-bold mb-12">Tech Stack</h3>
+            <div class="grid grid-cols-3 md:grid-cols-6 gap-8">
+                <div class="skill-icon text-center p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fedora/fedora-original.svg" class="h-16 mx-auto mb-2" alt="Node.js">
+                    <span class="text-gray-400">Fedora</span>
+                </div>
+                <div class="skill-icon text-center p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" class="h-16 mx-auto mb-2" alt="Python">
+                    <span class="text-gray-400">Python</span>
+                </div>
+                <div class="skill-icon text-center p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" class="h-16 mx-auto mb-2" alt="PostgreSQL">
+                    <span class="text-gray-400">PostgreSQL</span>
+                </div>
+                <div class="skill-icon text-center p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" class="h-16 mx-auto mb-2">
+                    <span class="text-gray-400">FastAPI</span>
+                </div>
+                <div class="skill-icon text-center p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" class="h-16 mx-auto mb-2" alt="Redis">
+                    <span class="text-gray-400">GIT</span>
+                </div>
+                <div class="skill-icon text-center p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/insomnia/insomnia-original.svg" class="h-16 mx-auto mb-2" alt="Docker">
+                    <span class="text-gray-400">Insomnia</span>
+                </div>
+                <div class="skill-icon text-center p-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" class="h-16 mx-auto mb-2" alt="Redis">
+                    <span class="text-gray-400">VSCode</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-2xl mx-auto">
+                <h3 class="text-3xl font-bold mb-12 text-center">✉️ Contact Me!</h3>
+                <form class="space-y-6">
+                    <div>
+                        <input type="text" name="name" placeholder="Name" class="w-full bg-gray-700 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    </div>
+                    <div>
+                        <input type="email" name="email" placeholder="Email" class="w-full bg-gray-700 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-blue-400">
+                    </div>
+                    <div>
+                        <textarea name="message" rows="5" placeholder="Message" class="w-full bg-gray-700 rounded-lg p-4 focus:outline-none focus:ring-2 focus:ring-blue-400"></textarea>
+                    </div>
+                    <button class="w-full bg-blue-600 hover:bg-blue-700 py-3 rounded-lg font-medium transition">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="{{ url_for('static', path='js/contact-form.js') }}"></script>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© <span id="copyrightYear"></span> Dmytro Shyrokov. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="https://t.me/turn_the_light_off" target="_blank" class="text-gray-400 hover:text-blue-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221l-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.446 1.394c-.16.16-.295.295-.605.295l.213-3.05 5.56-5.022c.24-.213-.054-.333-.373-.12l-6.87 4.326-2.96-.924c-.64-.203-.658-.64.135-.954l11.57-4.458c.535-.196 1.006.128.832.94z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/youngling_coder" target="_blank" class="text-gray-400 hover:text-blue-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/youngling-coder" target="_blank" class="text-gray-400 hover:text-blue-400 transition">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.6.113.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="youngling.coder" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
+</body>
+</html>

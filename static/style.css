@@ -1,0 +1,67 @@
+.skill-icon {
+    transition: all .3s ease;
+}
+
+.skill-icon:hover {
+    transform: translateY(-5px);
+}
+
+#mobile-menu-button, #mobile-menu {
+    transition: all .3s ease;
+}
+
+.project-card {
+    transition: all .3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+}
+.rotate-words {
+    animation: rotate 7.5s forwards infinite;
+    ;
+}
+@keyframes rotate {
+    0%, 20% { transform: translateY(0%); }
+    25%,45% { transform: translateY(-25%); }
+    50%,70% { transform: translateY(-50%); }
+    75%,95% { transform: translateY(-75%); }
+    100% { transform: translateY(0%); }
+}
+
+@keyframes cursor {
+    0%, 100% { opacity: 0 }
+    50% { opacity: 1 }
+}
+
+.code-overlay code {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.parallax-container {
+    transform-style: preserve-3d;
+    transition: transform 0.2s ease-out, scale 0.2s ease-out;
+}
+
+.parallax-container:hover {
+    transform: scale(1.05);
+}
+
+.parallax-container::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, rgba(30, 41, 59, 0.4) 0%, rgba(30, 41, 59, 0) 100%);
+}
+
+
+.typewriter::after {
+    content: "█";
+    position: absolute;
+    animation: cursor 1s infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
