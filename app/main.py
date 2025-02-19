@@ -6,10 +6,9 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
 
-from app import email
-from app.settings import application_settings
-import app.schemas as schemas
-
+from . import email
+from .settings import application_settings
+from . import schemas
 
 app = FastAPI()
 app.mount("/static", StaticFiles(directory="static/"), "static")
