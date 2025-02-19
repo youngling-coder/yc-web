@@ -6,7 +6,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 
 
-from . import email
+from . import smtp
 from .settings import application_settings
 from . import schemas
 
@@ -25,7 +25,7 @@ async def root(request: Request):
 @app.post("/contact")
 async def contact(email_scheme: Annotated[schemas.Email, Body()]):
 
-    await email.send_email(
+    await smtp.send_email(
         to=application_settings.owner_email,
         subject="Reply To Your Portfolio",
         content=email_scheme.content,
