@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+const links = [
+  { href: "#about", text: "About" },
+  { href: "#projects", text: "Projects" },
+  { href: "#skills", text: "Skills" },
+  { href: "#contact", text: "Contact" },
+];
+---
+
+<nav class="fixed w-[95%] bg-gray-800/90 backdrop-blur-sm z-50 top-4 left-1/2 transform -translate-x-1/2 rounded-lg">
+    <div class="container mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+            <div class="flex gap-[.5em] flex-row items-center">
+                <Image
+                src="https://avatars.githubusercontent.com/u/142408709?v=4"
+                class="rounded-lg w-[2em] hover:rotate-3 transition-transform duration-300"
+                alt="Dmytro Shyrokov"
+                width={32}
+                height={32}
+                format="webp"
+                />
+                <h1 class="text-xl font-bold">Dmytro Shyrokov</h1>
+            </div>
+
+            <div class="hidden md:flex space-x-8">
+                {links.map(link => (
+                    <a href={link.href} class="hover:text-blue-400 transition">{link.text}</a>
+                ))}
+            </div>
+
+            <button id="mobile-menu-button" class="md:hidden text-white hover:text-blue-400 transition">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+                          d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div id="mobile-menu" class="hidden md:hidden absolute w-full left-0 mt-2 bg-gray-800/90 backdrop-blur-sm rounded-lg">
+        <div class="px-6 py-4 flex flex-col space-y-4">
+            {links.map(link => (
+                <a href={link.href} class="hover:text-blue-400 transition">{link.text}</a>
+            ))}
+        </div>
+    </div>
+</nav>
+
+<script src="/src/js/mobile-menu.js" is:inline></script>

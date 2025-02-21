@@ -1,0 +1,28 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Nav from '../components/Nav.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import Projects from '../components/Projects.astro';
+import Skills from '../components/Skills.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<MainLayout>
+    <Nav />
+    <Hero />
+    <About />
+    <Projects />
+    <Skills />
+    <Contact />
+    <Footer />
+    
+<!-- Smooth Scroll Script -->
+	<script src="/src/js/smooth-scroll.js" is:inline></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
+			document.getElementById('copyrightYear').textContent = `${new Date().getFullYear()}`;
+		});
+	</script>
+</MainLayout>

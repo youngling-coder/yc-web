@@ -1,0 +1,24 @@
+---
+const skills = [
+  { name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+  { name: "PostgreSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg" },
+  { name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" },
+  { name: "GIT", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
+  { name: "Insomnia", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/insomnia/insomnia-original.svg" },
+  { name: "VSCode", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" }
+];
+---
+
+<section id="skills" class="py-20 bg-gray-800/50">
+    <div class="container mx-auto px-6">
+        <h3 class="text-3xl font-bold mb-12">Tech Stack</h3>
+        <div class="grid grid-cols-3 md:grid-cols-6 gap-8">
+            {skills.map(skill => (
+                <div class="skill-icon text-center p-4">
+                    <img src={skill.icon} class="h-16 mx-auto mb-2" alt={skill.name} width="64" height="64">
+                    <span class="text-gray-400">{skill.name}</span>
+                </div>
+            ))}
+        </div>
+    </div>
+</section>
