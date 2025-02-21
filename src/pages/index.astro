@@ -18,8 +18,10 @@ import Footer from '../components/Footer.astro';
     <Contact />
     <Footer />
     
-<!-- Smooth Scroll Script -->
-	<script src="/src/js/smooth-scroll.js" is:inline></script>
+	<script>
+        import "/src/js/smooth-scroll.js";
+    </script>
+    
 	<script>
 		document.addEventListener('DOMContentLoaded', () => {
 			document.getElementById('copyrightYear').textContent = `${new Date().getFullYear()}`;
