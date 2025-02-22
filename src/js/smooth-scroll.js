@@ -26,6 +26,8 @@ document.querySelectorAll('.project-card').forEach((card) => {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    var currentYear = new Date().getFullYear();
-    document.getElementById('copyrightYear').textContent = currentYear;
+    const copyrightElement = document.getElementById('copyrightYear');
+    if (copyrightElement) {
+        copyrightElement.textContent = `${new Date().getFullYear()}`;
+    }
 });

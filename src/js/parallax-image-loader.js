@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get("/")
 async def hello():
-    return {"message": "Hello World!"}`;
+    return {"message": "Click Me!"}`;
 
 function animateCode() {
     const codeElement = document.getElementById('animated-code');
@@ -43,7 +43,6 @@ async function fetchRandomImage() {
         const data = await response.json();
         
         imageContainer.style.backgroundImage = `url(${data.urls.regular})`;
-        console.log(imageContainer.style.backgroundImage);
         
     } catch (error) {
         // do nothing
