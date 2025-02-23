@@ -1,7 +1,7 @@
 ---
 import '../styles/style.css';
 
-const title = "Dmytro Shyrokov - Python & Backend Developer";
+const title = "Dmytro Shyrokov (aka Youngling Coder)- Python & Backend Developer";
 const description = "Python & Backend Developer specializing in Software & API design and development. Building robust and scalable APIs with Python and FastAPI.";
 ---
 
@@ -10,6 +10,12 @@ const description = "Python & Backend Developer specializing in Software & API d
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description}/>
+    <meta property="og:image" content="/img/youngling-coder.png" />
+    <meta property="og:type" content="website" />
+
     <link rel="icon" type="image/png" href="/img/youngling-coder.png" />
     <title>{title}</title>
 
