@@ -9,17 +9,17 @@ const links = [
 ];
 ---
 
-<nav class="fixed w-[95%] bg-gray-800/90 backdrop-blur-sm z-50 top-4 left-1/2 transform -translate-x-1/2 rounded-lg">
+<nav id="main-navbar" class="fixed w-[95%] bg-gray-800/90 backdrop-blur-sm z-50 top-4 left-1/2 transform -translate-x-1/2 rounded-lg transition-transform duration-300">
     <div class="container mx-auto px-6 py-4">
         <div class="flex items-center justify-between">
-            <div class="flex gap-[.5em] flex-row items-center">
+            <div class="flex gap-[.5em] flex-row items-center cursor-pointer" onclick="document.getElementById('hero').scrollIntoView({ behavior: 'smooth' })">
                 <Image
-                src="/img/youngling-coder.png"
-                class="rounded-lg w-[2em] hover:rotate-3 transition-transform duration-300"
-                alt="Dmytro Shyrokov"
-                width={32}
-                height={32}
-                format="webp"
+                    src="/img/logo-coder.png"
+                    class="rounded-lg w-[2em] hover:rotate-3 transition-transform duration-300"
+                    alt="Dmytro Shyrokov"
+                    width={32}
+                    height={32}
+                    format="webp"
                 />
                 <h1 class="text-xl font-bold">Dmytro Shyrokov</h1>
             </div>
@@ -50,4 +50,47 @@ const links = [
 
 <script>
     import "/src/js/mobile-menu.js";
+    if (typeof window !== "undefined") {
+        let lastScroll = window.scrollY;
+        let mouseOnTop = false;
+        const navbar = document.getElementById('main-navbar');
+
+        function showNavbar() {
+            navbar.style.transform = 'translate(-50%, 0)';
+        }
+        function hideNavbar() {
+            navbar.style.transform = 'translate(-50%, -120%)';
+        }
+
+        function updateNavbar() {
+            const currentScroll = window.scrollY;
+            if (currentScroll < 200 || currentScroll < lastScroll || mouseOnTop) {
+                showNavbar();
+            } else {
+                hideNavbar();
+            }
+            lastScroll = currentScroll;
+        }
+
+        window.addEventListener('scroll', updateNavbar);
+
+        window.addEventListener('mousemove', (e) => {
+            if (e.clientY <= 200) {
+                mouseOnTop = true;
+                showNavbar();
+            } else {
+                mouseOnTop = false;
+                updateNavbar();
+            }
+        });
+
+        // Wenn der Cursor das Fenster verlässt, Navbar ausblenden (außer man ist oben)
+        window.addEventListener('mouseout', (e) => {
+            // Nur ausblenden, wenn die Maus oben war
+            if (mouseOnTop && !(window.scrollY < 200)) {
+                mouseOnTop = false;
+                hideNavbar();
+            }
+        });
+    }
 </script>

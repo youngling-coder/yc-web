@@ -3,7 +3,7 @@
 }
 
 .skill-icon:hover {
-    transform: translateY(-5px);
+    transform: scale(1.05);
 }
 
 #mobile-menu-button, #mobile-menu {
@@ -11,15 +11,17 @@
 }
 
 .project-card {
+    will-change: transform;
     transition: all .3s ease;
+
 }
 
 .project-card:hover {
-    transform: scale(1.03);
+    transform: translateY(-5px);
 }
+
 .rotate-words {
     animation: rotate 7.5s forwards infinite;
-    ;
 }
 @keyframes rotate {
     0%, 20% { transform: translateY(0%); }
