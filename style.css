@@ -251,9 +251,13 @@ header {
 }
 
 .flip-card {
-    width: 800px;
+    width: 700px;
     height: 500px;
     perspective: 2000px;
+}
+
+.flip-card.flipped .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
 .flip-card-inner {
@@ -265,18 +269,6 @@ header {
     cursor: pointer;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(15deg) rotateX(5deg);
-}
-
-.flip-card.flipped .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card.flipped:hover .flip-card-inner {
-    transform: rotateY(180deg) rotateY(15deg) rotateX(5deg);
 }
 
 .flip-card-front, .flip-card-back {
@@ -307,6 +299,8 @@ header {
 }
 
 .profile-photo {
+    min-width: 150px;
+    min-height: 150px;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -352,9 +346,8 @@ header {
 }
 
 .flip-indicator {
-    position: absolute;
-    bottom: 30px;
-    right: 30px;
+    position: flex;
+    right: 50%;
     color: var(--accent);
     font-size: 1rem;
     font-family: 'JetBrains Mono', monospace;
@@ -814,12 +807,17 @@ footer {
     }
     
     .profile-photo {
-        width: 150px;
-        height: 150px;
+        width: 170px;
+        height: 170px;
     }
 }
 
 @media (max-width: 480px) {
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+
     .flip-card {
         width: 300px;
         height: 420px;
@@ -832,4 +830,19 @@ footer {
     .flip-card-front p {
         font-size: 1.1rem;
     }
+/* 
+    .flip-indicator {
+        display: none;
+    } */
 }
+
+@media (min-width: 480px) {
+    .flip-card:hover .flip-card-inner {
+       transform: rotateY(15deg) rotateX(5deg);
+    }
+    
+    .flip-card.flipped:hover .flip-card-inner {
+       transform: rotateY(180deg) rotateY(15deg) rotateX(5deg);
+    }
+}
+
