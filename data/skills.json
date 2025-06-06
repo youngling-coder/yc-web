@@ -1,0 +1,47 @@
+[
+    {
+        "icon": "brand-python",
+        "name": "Python",
+        "description": "Advanced Python programming, asynchronous programming, and optimization techniques."
+    },
+    {
+        "icon": "rocket",
+        "name": "FastAPI",
+        "description": "Developing high-performance APIs with automatic documentation using FastAPI."
+    },
+    {
+        "icon": "terminal-2",
+        "name": "Linux",
+        "description": "Server administration, scripting, and performance optimization."
+    },
+    {
+        "icon": "database",
+        "name": "PostgreSQL",
+        "description": "Designing and optimizing relational database schemas and queries."
+    },
+    {
+        "icon": "brand-docker",
+        "name": "Docker",
+        "description": "Containerizing applications for consistent development and deployment."
+    },
+    {
+        "icon": "brand-git",
+        "name": "Git",
+        "description": "Version control and collaborative development workflows."
+    },
+    {
+        "icon": "api",
+        "name": "REST APIs",
+        "description": "Designing and building RESTful services with best practices."
+    },
+    {
+        "icon": "shield",
+        "name": "Security",
+        "description": "Implementing authentication, authorization, and security best practices."
+    },
+    {
+        "icon": "brand-visual-studio",
+        "name": "VSCode",
+        "description": "Efficient code editing and debugging using Visual Studio Code."
+    }
+]

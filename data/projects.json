@@ -1,0 +1,41 @@
+[
+    {
+        "icon": "cash",
+        "tags": ["Python", "FastAPI", "PostgreSQL", "Alembic", "SQLAlchemy", "Pydantic", "Insomnia"],
+        "title": "MoneyGuard",
+        "description": "Web application that helps you track your financial situation. (Backend part)",
+        "links": [
+            {
+                "icon": "brand-github",
+                "url": "https://github.com/youngling-coder/MoneyGuard/",
+                "text": "Source Code"
+            }
+        ]
+    },
+    {
+        "icon": "robot",
+        "tags": ["Python", "aiogram", "requests", "Pydantic", "Gemini API"],
+        "title": "H4X-0R",
+        "description": "Telegram Bot with integrated LLM. Add it to your groups and enjoy your own assistant in every conversation!",
+        "links": [
+            {
+                "icon": "brand-github",
+                "url": "https://github.com/youngling-coder/H4X-0R/",
+                "text": "Source Code"
+            }
+        ]
+    },
+    {
+        "icon": "photo",
+        "tags": ["Python", "PyQt5", "requests", "Unsplash API", "Wallhaven API"],
+        "title": "WallpaperED",
+        "description": "Tool that automatically sets a new wallpaper image from the Unsplash every new session. Powered by the Unsplash API.",
+        "links": [
+            {
+                "icon": "brand-github",
+                "url": "https://github.com/youngling-coder/Wallpaper-ed/",
+                "text": "Source Code"
+            }
+        ]
+    }
+]
