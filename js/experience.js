@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(experiences => {
             const container = document.querySelector('.timeline');
-            experiences.forEach(exp => {
+            experiences.forEach((exp, idx) => {
                 const timelineItem = document.createElement('div');
                 timelineItem.className = 'timeline-item fade-in';
                 timelineItem.innerHTML = `
@@ -15,6 +15,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
                 container.appendChild(timelineItem);
+
+                setTimeout(() => {
+                    timelineItem.classList.add('appear');
+                }, 100 + idx * 100);
             });
         });
 });

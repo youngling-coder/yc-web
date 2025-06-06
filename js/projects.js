@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(projects => {
             const container = document.querySelector('.projects-grid');
-            projects.forEach(project => {
+            projects.forEach((project, idx) => {
                 const tagsHTML = project.tags.map(tag => 
                     `<span class="project-tag">${tag}</span>`
                 ).join('');
@@ -32,6 +32,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
                 container.appendChild(projectCard);
+
+
+                setTimeout(() => {
+                    projectCard.classList.add('appear');
+                }, 100 + idx * 100);
             });
         });
 });

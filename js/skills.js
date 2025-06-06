@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(skills => {
             const container = document.querySelector('.skills-grid');
-            skills.forEach(skill => {
+            skills.forEach((skill, idx) => {
                 const skillItem = document.createElement('div');
                 skillItem.className = 'skill-item fade-in';
                 skillItem.innerHTML = `
@@ -16,6 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="skill-description">${skill.description}</p>
                 `;
                 container.appendChild(skillItem);
+                // Animation verzögert starten
+                setTimeout(() => {
+                    skillItem.classList.add('appear');
+                }, 100 + idx * 100);
             });
         });
 });
