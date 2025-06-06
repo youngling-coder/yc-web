@@ -829,8 +829,8 @@ footer {
     .flip-indicator {
         display: none;
     }
-
     .flip-card-back p {
+        margin: 0;
         font-size: .9em;
     }
 }
