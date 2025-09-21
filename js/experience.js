@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(experiences => {
             const container = document.querySelector('.timeline');
-            experiences.forEach((exp, idx) => {
+            experiences.slice().reverse().forEach((exp, idx) => {
                 const timelineItem = document.createElement('div');
                 timelineItem.className = 'timeline-item fade-in';
                 timelineItem.innerHTML = `

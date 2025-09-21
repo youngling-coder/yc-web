@@ -44,6 +44,47 @@ window.addEventListener('scroll', () => {
 
 // Flip card functionality
 const flipCard = document.getElementById('flipCard');
+const flipCardInner = flipCard.querySelector('.flip-card-inner');
+
+// Flip on click
 flipCard.addEventListener('click', function() {
     this.classList.toggle('flipped');
+});
+
+// 3D tilt effect on hover, opposite to cursor position
+
+flipCard.addEventListener('mousemove', function(e) {
+    const rect = this.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    // Calculate rotation: move opposite to cursor
+    const rotateY = ((centerX - x) / centerX) * 30;
+    const rotateX = ((centerY - y) / centerY) * 10;
+    if (this.classList.contains('flipped')) {
+        // When flipped, rotateY is reversed to match the back side
+        flipCardInner.style.transform = `rotateY(${180 + rotateY}deg) rotateX(${rotateX}deg)`;
+    } else {
+        flipCardInner.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+    }
+});
+
+
+flipCard.addEventListener('mouseleave', function() {
+    if (this.classList.contains('flipped')) {
+        flipCardInner.style.transform = 'rotateY(180deg)';
+    } else {
+        flipCardInner.style.transform = '';
+    }
+});
+
+// Reset transform when flipped
+
+flipCard.addEventListener('transitionend', function() {
+    if (this.classList.contains('flipped')) {
+        flipCardInner.style.transform = 'rotateY(180deg)';
+    } else {
+        flipCardInner.style.transform = '';
+    }
 });

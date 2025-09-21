@@ -43,5 +43,10 @@
         "icon": "brand-visual-studio",
         "name": "VSCode",
         "description": "Efficient code editing and debugging using Visual Studio Code."
+    },
+    {
+        "icon": "brand-wordpress",
+        "name": "WordPress",
+        "description": "Building and customizing websites, themes, and plugins using WordPress."
     }
 ]

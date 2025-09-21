@@ -37,5 +37,18 @@
                 "text": "Source Code"
             }
         ]
+    },
+    {
+        "icon": "printer",
+        "tags": ["Python", "PyQt5", "requests", "Windows 10/11", "Printer Management"],
+        "title": "DruckerVerwaltung",
+        "description": "Printer Management is a Windows application for centrally managing and installing network printers.",
+        "links": [
+            {
+                "icon": "brand-github",
+                "url": "https://github.com/youngling-coder/PrinterManagement",
+                "text": "Source Code"
+            }
+        ]
     }
 ]

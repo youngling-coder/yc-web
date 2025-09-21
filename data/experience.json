@@ -1,8 +1,14 @@
 [
     {
-        "date": "May 2025 - Present",
-        "title": "System Integration & Administration Intern",
+        "date": "May 2025 - July 2025",
+        "title": "IT specialist for system integration intern",
         "company": "nachtblau.tv",
-        "description": "Assist with server architecture support, IT support for clients. Solving technical problems with server and client equipment."
+        "description": "IT support for clients. Solving technical problems with client equipment."
+    },
+    {
+        "date": "August 2025 - Present",
+        "title": "IT specialist for system integration trainee (Azubi)",
+        "company": "nachtblau.tv",
+        "description": "Assist with server architecture support, remote IT support, IT support for clients. Solving technical problems with server and client equipment."
     }
 ]
