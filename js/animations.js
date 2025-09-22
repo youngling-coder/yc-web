@@ -66,25 +66,25 @@ flipCard.addEventListener('mousemove', function(e) {
         // When flipped, rotateY is reversed to match the back side
         flipCardInner.style.transform = `rotateY(${180 + rotateY}deg) rotateX(${rotateX}deg)`;
     } else {
-        flipCardInner.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
+        flipCardInner.style.transform = `rotateY(${rotateY}deg) rotateX(${-rotateX}deg)`;
     }
 });
 
 
-flipCard.addEventListener('mouseleave', function() {
-    if (this.classList.contains('flipped')) {
-        flipCardInner.style.transform = 'rotateY(180deg)';
-    } else {
-        flipCardInner.style.transform = '';
-    }
-});
+// flipCard.addEventListener('mouseleave', function() {
+//     if (this.classList.contains('flipped')) {
+//         flipCardInner.style.transform = 'rotateY(180deg)';
+//     } else {
+//         flipCardInner.style.transform = '';
+//     }
+// });
 
 // Reset transform when flipped
 
-flipCard.addEventListener('transitionend', function() {
-    if (this.classList.contains('flipped')) {
-        flipCardInner.style.transform = 'rotateY(180deg)';
-    } else {
-        flipCardInner.style.transform = '';
-    }
-});
+// flipCard.addEventListener('transitionend', function() {
+//     if (this.classList.contains('flipped')) {
+//         flipCardInner.style.transform = 'rotateY(180deg)';
+//     } else {
+//         flipCardInner.style.transform = '';
+//     }
+// });

@@ -835,13 +835,3 @@ footer {
     }
 }
 
-@media (min-width: 480px) {
-    .flip-card:hover .flip-card-inner {
-       transform: rotateY(15deg) rotateX(5deg);
-    }
-    
-    .flip-card.flipped:hover .flip-card-inner {
-       transform: rotateY(180deg) rotateY(15deg) rotateX(5deg);
-    }
-}
-
