@@ -71,13 +71,13 @@ flipCard.addEventListener('mousemove', function(e) {
 });
 
 
-// flipCard.addEventListener('mouseleave', function() {
-//     if (this.classList.contains('flipped')) {
-//         flipCardInner.style.transform = 'rotateY(180deg)';
-//     } else {
-//         flipCardInner.style.transform = '';
-//     }
-// });
+flipCard.addEventListener('mouseleave', function() {
+    if (this.classList.contains('flipped')) {
+        flipCardInner.style.transform = 'rotateY(180deg)';
+    } else {
+        flipCardInner.style.transform = '';
+    }
+});
 
 // Reset transform when flipped
 
