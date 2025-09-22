@@ -81,10 +81,10 @@ flipCard.addEventListener('mouseleave', function() {
 
 // Reset transform when flipped
 
-// flipCard.addEventListener('transitionend', function() {
-//     if (this.classList.contains('flipped')) {
-//         flipCardInner.style.transform = 'rotateY(180deg)';
-//     } else {
-//         flipCardInner.style.transform = '';
-//     }
-// });
+flipCard.addEventListener('click', function() {
+    if (this.classList.contains('flipped')) {
+        flipCardInner.style.transform = 'rotateY(180deg)';
+    } else {
+        flipCardInner.style.transform = '';
+    }
+});
